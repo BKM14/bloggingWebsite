@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { SignupInput } from "@bkm1482004/medium-common"
 
 export const Auth = ({type}: {type: "signup" | "signin"}) => {
-        const link: string = (type == "signup") ? "signin" : "signup"
+        const link: string = (type == "signup") ? "" : "signup"
         const navigate = useNavigate();
 
         const [postInputs, setPostInputs] = useState<SignupInput>({
