@@ -21,9 +21,10 @@ export const Auth = ({type}: {type: "signup" | "signin"}) => {
             method: "POST",
             body: JSON.stringify({email: postInputs.email, password: postInputs.password})
             });
-            const { token } = await response.json();
+            const { token, username } = await response.json();
             if (token) {
                 localStorage.setItem("token", token);
+                localStorage.setItem('username', username);
                 alert("Login successful")
                 navigate("/blogs");
             } else {
@@ -41,9 +42,10 @@ export const Auth = ({type}: {type: "signup" | "signin"}) => {
             method: "POST",
             body: JSON.stringify(postInputs)
             });
-            const { token } = await response.json();
+            const { token, username } = await response.json();
             if (token) {
                 localStorage.setItem("token", token);
+                localStorage.setItem("username", username);
                 alert("Signup successful")
                 navigate("/blogs");
             } else {

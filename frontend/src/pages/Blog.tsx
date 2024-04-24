@@ -1,4 +1,4 @@
-import { AppBar } from "./Blogs";
+import { AppBar } from "../components/AppBar";
 import { useBlog } from "../hooks";
 import { SkeletonBlog } from "../components/Skeleton";
 

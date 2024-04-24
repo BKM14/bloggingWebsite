@@ -1,4 +1,4 @@
-import { AppBar } from "../pages/Blogs"
+import { AppBar } from "./AppBar"
 
 export const SkeletonBlog = () => {
     return (
